@@ -55,7 +55,7 @@ fn load_kdmapi_binds<'a>(lib: &'a Library) -> KDMAPIBinds<'a> {
             terminate_kdmapi_stream: lib.get(b"TerminateKDMAPIStream").unwrap(),
             reset_kdmapi_stream: lib.get(b"ResetKDMAPIStream").unwrap(),
             send_direct_data: lib.get(b"SendDirectData").unwrap(),
-            send_direct_data_no_buf: lib.get(b"SendDirectDataNoBuf").unwrap(),
+            //send_direct_data_no_buf: lib.get(b"SendDirectDataNoBuf").unwrap(),
             is_stream_open: AtomicBool::new(false),
         }
     }
@@ -82,9 +82,9 @@ impl<'a> KDMAPIStream<'a> {
     }
 
     /// Calls `SendDirectDataNoBuf`
-    pub fn send_direct_data_no_buf(&self, data: u32) -> u32 {
+    /*pub fn send_direct_data_no_buf(&self, data: u32) -> u32 {
         unsafe { (self.binds.send_direct_data_no_buf)(data) }
-    }
+    }*/
 }
 
 impl<'a> Drop for KDMAPIStream<'a> {
