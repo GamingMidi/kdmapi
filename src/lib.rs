@@ -81,7 +81,7 @@ impl<'a> KDMAPIStream<'a> {
         unsafe { (self.binds.send_direct_data)(data) }
     }
 
-    /// Calls `SendDirectDataNoBuf`
+    // Calls `SendDirectDataNoBuf`
     /*pub fn send_direct_data_no_buf(&self, data: u32) -> u32 {
         unsafe { (self.binds.send_direct_data_no_buf)(data) }
     }*/
