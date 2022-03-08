@@ -10,7 +10,7 @@ pub struct KDMAPIBinds<'a> {
     terminate_kdmapi_stream: Symbol<'a, unsafe extern "C" fn() -> i32>,
     reset_kdmapi_stream: Symbol<'a, unsafe extern "C" fn()>,
     send_direct_data: Symbol<'a, unsafe extern "C" fn(u32) -> u32>,
-    send_direct_data_no_buf: Symbol<'a, unsafe extern "C" fn(u32) -> u32>,
+    //send_direct_data_no_buf: Symbol<'a, unsafe extern "C" fn(u32) -> u32>,
     is_stream_open: AtomicBool,
 }
 
