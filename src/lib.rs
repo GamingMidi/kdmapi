@@ -50,12 +50,12 @@ fn load_kdmapi_lib() -> Library {
 fn load_kdmapi_binds<'a>(lib: &'a Library) -> KDMAPIBinds<'a> {
     unsafe {
         KDMAPIBinds {
-            is_kdmapi_available: lib.get(b"IsKDMAPIAvailable").unwrap(),
+            //is_kdmapi_available: lib.get(b"IsKDMAPIAvailable").unwrap(),
             initialize_kdmapi_stream: lib.get(b"InitializeKDMAPIStream").unwrap(),
             terminate_kdmapi_stream: lib.get(b"TerminateKDMAPIStream").unwrap(),
             reset_kdmapi_stream: lib.get(b"ResetKDMAPIStream").unwrap(),
             send_direct_data: lib.get(b"SendDirectData").unwrap(),
-            send_direct_data_no_buf: lib.get(b"SendDirectDataNoBuf").unwrap(),
+            //send_direct_data_no_buf: lib.get(b"SendDirectDataNoBuf").unwrap(),
             is_stream_open: AtomicBool::new(false),
         }
     }
